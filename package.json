@@ -1,0 +1,28 @@
+{
+  "name": "jest-exercises",
+  "version": "1.0.0",
+  "description": "Jest exercises for JS and LWC",
+  "scripts": {
+    "lint:lwc": "eslint **/lwc/**",
+    "test": "npm run test:unit",
+    "test:unit": "lwc-jest",
+    "test:unit:watch": "lwc-jest --watch",
+    "test:unit:debug": "lwc-jest --debug",
+    "test:unit:coverage": "lwc-jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmesic/jest-exercises.git"
+  },
+  "author": "Kenan Mesic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmesic/jest-exercises/issues"
+  },
+  "homepage": "https://github.com/kmesic/jest-exercises#readme",
+  "devDependencies": {
+    "@salesforce/eslint-config-lwc": "^0.3.0",
+    "@salesforce/sfdx-lwc-jest": "^0.5.4",
+    "eslint": "^6.4.0"
+  }
+}

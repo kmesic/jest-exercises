@@ -1,0 +1,16 @@
+<template>
+    <h1 class="c-hello-world__title slds-m-around_medium">{message}</h1>
+
+    <lightning-button
+        label="Logout"
+        variant="brand"
+        onclick={handleClick}>
+    </lightning-button>
+
+    <h1 class="c-hello-world__name">{nameMessage}</h1>
+    
+    <label for="name">Enter your name!</label>
+    <input type="text" id="name" class="c-hello-world__name-input" name="name" maxlength="30" size="20" onchange={handleChange}>
+
+    <!-- <c-wow></c-wow> -->
+</template>

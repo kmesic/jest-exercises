@@ -1,9 +1,72 @@
-# SFDX App
+# Jest Exercises
+This repo is for practicing jest with JavaScript and LWC!
 
-## Dev, Build and Test
+## Setup
+1. Clone this repo or click the download button to download it.
+`
+git clone https://github.com/kmesic/jest-exercises.git
+`
 
-## Resources
+Requirements:
+- node (LTS - long term support)
+- npm
 
-## Description of Files and Directories
+2. Run `node -v`
+If the command fails, please install node (npm comes with node): https://nodejs.org/en/
 
-## Issues
+3. I recommend using the LTS version of node. Easiest way to do that, is to install n (https://github.com/tj/n)
+`
+npm install -g n
+n lts
+`
+5. Run `npm install` inside the cloned repo
+
+## Commands
+I have created aliases for each of the lwc-jest commands. You can visit all the aliases in the package.json file and then under scripts you will see the command.
+
+### npm run test -> lwc-jest
+
+### npm run test:unit:debug -> lwc-jest --debug
+Runs the tests in debug mode. Allows you to set breakpoints. Read the Debugger section to know how to set up the environment for it.
+
+### npm run test:unit:watch -> lwc-jest --watch
+Runs the tests in watch mode. Anytime a file changes, reruns tests.
+
+### npm run test:unit:coverage -> lwc-jest --coverage
+Runs the tests to show code coverage.
+
+## Debugger
+There a couple of ways you can debug your jest test.
+
+### Chrome Dev Tools
+1. Make sure that Chrome is updated to the latest edition
+-> enter chrome://settings/help in your browser tab
+2. Add the Node.js V8 --inspector manager extension https://chrome.google.com/webstore/detail/nodejs-v8-inspector-manag/gnhhdgbaldcilmgcpfddgdbkhjohddkj
+3. Click on the Node.js V8 inspector and toggle the setting to “Auto”
+4. Add a breakpoint by adding a “debugger” statement somewhere in your code
+5. run `npm run test:unit:debug`
+6. Dev Tools should open up and break at the debugger statement
+
+### Visual Studio Code
+1. From the Visual Studio Code dropdowns, select Debug > Add Configuration....
+2. If you're prompted for an Environment choose any value.
+3. Mac users, replace the contents of the generated launch.json with the following. (for Windows users see the Jest website for launch.json contents).
+`{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Jest Tests",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "--inspect-brk",
+        "${workspaceRoot}/node_modules/.bin/jest",
+        "--runInBand"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229
+    }
+  ]
+}`
+4. To run tests, press F5 or select Debug > Start Debugging. 
