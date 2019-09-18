@@ -11,20 +11,22 @@ Requirements:
 - node (LTS - long term support)
 - npm
 
-2. Run `node -v`
+2. Run ```node -v```
 If the command fails, please install node (npm comes with node): https://nodejs.org/en/
 
 3. I recommend using the LTS version of node. Easiest way to do that, is to install n (https://github.com/tj/n)
-`
+```
 npm install -g n
 n lts
-`
-5. Run `npm install` inside the cloned repo
+```
+
+5. Run ```npm install``` inside the cloned repo
 
 ## Commands
 I have created aliases for each of the lwc-jest commands. You can visit all the aliases in the package.json file and then under scripts you will see the command.
 
 ### npm run test -> lwc-jest
+Runs the tests!
 
 ### npm run test:unit:debug -> lwc-jest --debug
 Runs the tests in debug mode. Allows you to set breakpoints. Read the Debugger section to know how to set up the environment for it.
@@ -51,7 +53,9 @@ There a couple of ways you can debug your jest test.
 1. From the Visual Studio Code dropdowns, select Debug > Add Configuration....
 2. If you're prompted for an Environment choose any value.
 3. Mac users, replace the contents of the generated launch.json with the following. (for Windows users see the Jest website for launch.json contents).
-`{
+
+```
+{
   "version": "0.2.0",
   "configurations": [
     {
@@ -68,5 +72,7 @@ There a couple of ways you can debug your jest test.
       "port": 9229
     }
   ]
-}`
+}
+```
+
 4. To run tests, press F5 or select Debug > Start Debugging. 

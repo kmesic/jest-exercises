@@ -67,7 +67,7 @@ describe('Get Data Suite', () => {
     });
 });
 
-
+// --- Exercise 1 --- //
 // TODO: Practice simple jest test and spying 
 describe('map', () => {
     it("map executes on every element", () => {
