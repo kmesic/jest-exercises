@@ -2,25 +2,37 @@
 This repo is for practicing jest with JavaScript and LWC!
 
 ## Setup
-1. Clone this repo or click the download button to download it.
-`
+*Some of these commands might need the sudo command preprended to them, depending on your OS*
+
+**Step 1:** Clone this repo or click the download button to download it.
+```
 git clone https://github.com/kmesic/jest-exercises.git
-`
+```
 
 Requirements:
 - node (LTS - long term support)
 - npm
 
-2. Run ```node -v```
-If the command fails, please install node (npm comes with node): https://nodejs.org/en/
+**Step 2:** Run the command below. If the command fails, please install node (npm comes with node): https://nodejs.org/en/
+```
+node -v
+```
+- Easiest way to install node is through brew on Mac: 
+```
+brew install node
+```
 
-3. I recommend using the LTS version of node. Easiest way to do that, is to install n (https://github.com/tj/n)
+**Step 3:** I recommend using the LTS version of node. Easiest way to do that, is to install n (https://github.com/tj/n)
 ```
 npm install -g n
 n lts
 ```
 
-5. Run ```npm install``` inside the cloned repo
+**Step 4:** cd into the cloned directory and run:
+```
+npm install
+```
+- If you get an error here, please remove the package-lock.json, and retry.
 
 ## Commands
 I have created aliases for each of the lwc-jest commands. You can visit all the aliases in the package.json file and then under scripts you will see the command.
