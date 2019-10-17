@@ -34,7 +34,7 @@ npm install
 ```
 - If you get an error here, please remove the package-lock.json, and retry.
 
-**Step 5:** I would highly recommend yarn over npm to run the commands. If you don't have yarn, please install.
+**Step 5:** I would highly recommend yarn over npm to run the commands. If you don't have yarn, please install (https://yarnpkg.com/lang/en/docs/install/#mac-stable).
 ```
 brew install yarn
 ```
