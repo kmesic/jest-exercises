@@ -34,8 +34,15 @@ npm install
 ```
 - If you get an error here, please remove the package-lock.json, and retry.
 
+**Step 5:** I would highly recommend yarn over npm to run the commands. If you don't have yarn, please install.
+```
+brew install yarn
+```
+
 ## Commands
 I have created aliases for each of the lwc-jest commands. You can visit all the aliases in the package.json file and then under scripts you will see the command.
+
+**If using yarn over npm, replace `npm run` with `yarn`. Allows more flexibility and better output!**
 
 ### npm run test -> lwc-jest
 Runs the tests!
@@ -48,6 +55,13 @@ Runs the tests in watch mode. Anytime a file changes, reruns tests.
 
 ### npm run test:unit:coverage -> lwc-jest --coverage
 Runs the tests to show code coverage.
+
+### yarn test {testName} -> lwc-jest {testName}
+Runs a specific test file
+Ex. This will only run the tests in helloWorld
+```
+yarn test helloWorld
+```
 
 ## Debugger
 There a couple of ways you can debug your jest test.
